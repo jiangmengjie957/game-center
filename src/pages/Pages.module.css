@@ -1,0 +1,207 @@
+.content {
+  padding: 60px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin: 0 0 80px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -2px;
+  position: relative;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.gameSection {
+  margin-top: 40px;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.sectionTitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 50px 0;
+  text-align: left;
+  position: relative;
+  padding-left: 20px;
+  letter-spacing: 1px;
+}
+
+.sectionTitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 40px;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.gameCard {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  cursor: pointer;
+}
+
+.gameCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.gameCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+  border-color: rgba(102, 126, 234, 0.5);
+}
+
+.gameCard:hover::before {
+  opacity: 1;
+}
+
+.gameCardContent {
+  padding: 50px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.gameCardContent h3 {
+  margin: 0 0 16px 0;
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.gameCardContent p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+}
+
+.backLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 242, 254, 0.5);
+}
+
+.gameDescription {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #e0e0e0;
+  line-height: 1.7;
+}
+
+.gamePlaceholder {
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.gamePlaceholder p {
+  color: #aaa;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    letter-spacing: -1px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .gameGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .content {
+    padding: 40px 20px;
+  }
+  
+  .gameSection {
+    margin-top: 20px;
+  }
+
+  .gameCardContent {
+    padding: 40px 25px;
+  }
+
+  .gameCardContent h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+  
+  .content {
+    padding: 30px 15px;
+  }
+}
+

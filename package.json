@@ -1,0 +1,31 @@
+{
+  "name": "game-center",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rsbuild build",
+    "dev": "rsbuild dev --open",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.10.0",
+    "tailwindcss": "^4.1.17",
+    "three": "^0.160.0",
+    "@react-three/fiber": "^8.15.12",
+    "@react-three/drei": "^9.96.1",
+    "framer-motion": "^10.16.16",
+    "@mediapipe/tasks-vision": "^0.10.18",
+    "lucide-react": "^0.300.0"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.6.7",
+    "@rsbuild/plugin-react": "^1.4.2",
+    "@types/three": "^0.160.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "typescript": "^5.9.3"
+  }
+}
