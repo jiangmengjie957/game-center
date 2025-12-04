@@ -4,7 +4,7 @@ import './index.css';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/game">
       <AppRoutes />
     </Router>
   );
